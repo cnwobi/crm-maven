@@ -15,13 +15,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Bootstrap core CSS -->
-    <link href="/CRM/resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/CRM/resources/css/starter-template.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/starter-template.css" rel="stylesheet">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>Customer Relationship Manager</title>
 
 
 </head>
@@ -74,7 +74,7 @@
             <!-- construct an update link-->
 
             <!-- loop over and print customers-->
-            <c:forEach var="tempCustomer" items="${customers}">
+            <c:forEach var="tempCustomer"  items="${customers}">
                 <c:url var="updateLink" value="/customer/showFormForUpdate">
                     <c:param name="customerId" value="${tempCustomer.id}"/>
                 </c:url>
@@ -103,7 +103,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="/js/vendor/jquery-slim.min.js"><\/script>')</script>
-<script src="/CRM/resources/js/vendor/popper.min.js"></script>
-<script src="/CRM/resources/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/vendor/popper.min.js"></script>
+<script src="${pageContext.request.contextPath} /resources/js/bootstrap.min.js"></script>
 </body>
 </html>
